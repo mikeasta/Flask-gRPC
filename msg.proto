@@ -2,7 +2,11 @@ syntax = "proto3";
 
 package flask_grpc;
 
-message FlaskMessage {
+service FlaskService {
+    rpc Request (Message) returns (Response);
+}
+
+message Message {
 
     // String message
     message StringMessage {
@@ -24,4 +28,8 @@ message FlaskMessage {
     optional StringMessage  strmsg = 1;
     optional NDArrayMessage ndamsg = 2;
     optional ImageMessage   imgmsg = 3;
+}
+
+message Response {
+    string res = 1;
 }
