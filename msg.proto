@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package flask_grpc;
+
+message FlaskMessage {
+
+    // String message
+    message StringMessage {
+        string msg = 1;
+    }
+
+    // NP Array
+    message NDArrayMessage {
+        bytes ndarray = 1;
+    }
+
+    // Image 
+    message ImageMessage {
+        int32 width      = 1;
+        int32 height     = 2;
+        bytes image_data = 3;
+    }
+
+    optional StringMessage  strmsg = 1;
+    optional NDArrayMessage ndamsg = 2;
+    optional ImageMessage   imgmsg = 3;
+}
