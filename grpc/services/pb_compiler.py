@@ -13,7 +13,7 @@ def pb_compiler(\
     src=PATH_TO_PROTOBUF_SRC,\
     dst=PATH_TO_PROTOBUF_DST,\
     filename=PROTOBUF_FILENAME):
-    command = f'protoc -I={src} --python_out={dst} {src}/{filename}.proto'
+    command = f'python -m grpc_tools.protoc -I={src} --python_out={dst} --grpc_python_out={dst} {src}/{filename}.proto'
     os.system(command)
 
 if __name__ == "__main__":

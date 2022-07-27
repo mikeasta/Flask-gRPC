@@ -14,45 +14,34 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\tmsg.proto\x12\nflask_grpc\"\xd6\x02\n\x07Message\x12\x36\n\x06strmsg\x18\x01 \x01(\x0b\x32!.flask_grpc.Message.StringMessageH\x00\x88\x01\x01\x12\x37\n\x06ndamsg\x18\x02 \x01(\x0b\x32\".flask_grpc.Message.NDArrayMessageH\x01\x88\x01\x01\x12\x35\n\x06imgmsg\x18\x03 \x01(\x0b\x32 .flask_grpc.Message.ImageMessageH\x02\x88\x01\x01\x1a\x1c\n\rStringMessage\x12\x0b\n\x03msg\x18\x01 \x01(\t\x1a!\n\x0eNDArrayMessage\x12\x0f\n\x07ndarray\x18\x01 \x01(\x0c\x1a\x41\n\x0cImageMessage\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x12\n\nimage_data\x18\x03 \x01(\x0c\x42\t\n\x07_strmsgB\t\n\x07_ndamsgB\t\n\x07_imgmsg\"\x17\n\x08Response\x12\x0b\n\x03res\x18\x01 \x01(\t2D\n\x0c\x46laskService\x12\x34\n\x07Request\x12\x13.flask_grpc.Message\x1a\x14.flask_grpc.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\tmsg.proto\x12\nflask_grpc\"\x1c\n\rStringMessage\x12\x0b\n\x03msg\x18\x01 \x01(\t\"!\n\x0eNDArrayMessage\x12\x0f\n\x07ndarray\x18\x01 \x01(\x0c\"A\n\x0cImageMessage\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x12\n\nimage_data\x18\x03 \x01(\x0c\"\x17\n\x08Response\x12\x0b\n\x03res\x18\x01 \x01(\t2\xe3\x01\n\x0c\x46laskService\x12\x45\n\rStringRequest\x12\x19.flask_grpc.StringMessage\x1a\x19.flask_grpc.StringMessage\x12H\n\x0eNDArrayRequest\x12\x1a.flask_grpc.NDArrayMessage\x1a\x1a.flask_grpc.NDArrayMessage\x12\x42\n\x0cImageRequest\x12\x18.flask_grpc.ImageMessage\x1a\x18.flask_grpc.ImageMessageb\x06proto3')
 
 
 
-_MESSAGE = DESCRIPTOR.message_types_by_name['Message']
-_MESSAGE_STRINGMESSAGE = _MESSAGE.nested_types_by_name['StringMessage']
-_MESSAGE_NDARRAYMESSAGE = _MESSAGE.nested_types_by_name['NDArrayMessage']
-_MESSAGE_IMAGEMESSAGE = _MESSAGE.nested_types_by_name['ImageMessage']
+_STRINGMESSAGE = DESCRIPTOR.message_types_by_name['StringMessage']
+_NDARRAYMESSAGE = DESCRIPTOR.message_types_by_name['NDArrayMessage']
+_IMAGEMESSAGE = DESCRIPTOR.message_types_by_name['ImageMessage']
 _RESPONSE = DESCRIPTOR.message_types_by_name['Response']
-Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,), {
-
-  'StringMessage' : _reflection.GeneratedProtocolMessageType('StringMessage', (_message.Message,), {
-    'DESCRIPTOR' : _MESSAGE_STRINGMESSAGE,
-    '__module__' : 'msg_pb2'
-    # @@protoc_insertion_point(class_scope:flask_grpc.Message.StringMessage)
-    })
-  ,
-
-  'NDArrayMessage' : _reflection.GeneratedProtocolMessageType('NDArrayMessage', (_message.Message,), {
-    'DESCRIPTOR' : _MESSAGE_NDARRAYMESSAGE,
-    '__module__' : 'msg_pb2'
-    # @@protoc_insertion_point(class_scope:flask_grpc.Message.NDArrayMessage)
-    })
-  ,
-
-  'ImageMessage' : _reflection.GeneratedProtocolMessageType('ImageMessage', (_message.Message,), {
-    'DESCRIPTOR' : _MESSAGE_IMAGEMESSAGE,
-    '__module__' : 'msg_pb2'
-    # @@protoc_insertion_point(class_scope:flask_grpc.Message.ImageMessage)
-    })
-  ,
-  'DESCRIPTOR' : _MESSAGE,
+StringMessage = _reflection.GeneratedProtocolMessageType('StringMessage', (_message.Message,), {
+  'DESCRIPTOR' : _STRINGMESSAGE,
   '__module__' : 'msg_pb2'
-  # @@protoc_insertion_point(class_scope:flask_grpc.Message)
+  # @@protoc_insertion_point(class_scope:flask_grpc.StringMessage)
   })
-_sym_db.RegisterMessage(Message)
-_sym_db.RegisterMessage(Message.StringMessage)
-_sym_db.RegisterMessage(Message.NDArrayMessage)
-_sym_db.RegisterMessage(Message.ImageMessage)
+_sym_db.RegisterMessage(StringMessage)
+
+NDArrayMessage = _reflection.GeneratedProtocolMessageType('NDArrayMessage', (_message.Message,), {
+  'DESCRIPTOR' : _NDARRAYMESSAGE,
+  '__module__' : 'msg_pb2'
+  # @@protoc_insertion_point(class_scope:flask_grpc.NDArrayMessage)
+  })
+_sym_db.RegisterMessage(NDArrayMessage)
+
+ImageMessage = _reflection.GeneratedProtocolMessageType('ImageMessage', (_message.Message,), {
+  'DESCRIPTOR' : _IMAGEMESSAGE,
+  '__module__' : 'msg_pb2'
+  # @@protoc_insertion_point(class_scope:flask_grpc.ImageMessage)
+  })
+_sym_db.RegisterMessage(ImageMessage)
 
 Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), {
   'DESCRIPTOR' : _RESPONSE,
@@ -65,16 +54,14 @@ _FLASKSERVICE = DESCRIPTOR.services_by_name['FlaskService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _MESSAGE._serialized_start=26
-  _MESSAGE._serialized_end=368
-  _MESSAGE_STRINGMESSAGE._serialized_start=205
-  _MESSAGE_STRINGMESSAGE._serialized_end=233
-  _MESSAGE_NDARRAYMESSAGE._serialized_start=235
-  _MESSAGE_NDARRAYMESSAGE._serialized_end=268
-  _MESSAGE_IMAGEMESSAGE._serialized_start=270
-  _MESSAGE_IMAGEMESSAGE._serialized_end=335
-  _RESPONSE._serialized_start=370
-  _RESPONSE._serialized_end=393
-  _FLASKSERVICE._serialized_start=395
-  _FLASKSERVICE._serialized_end=463
+  _STRINGMESSAGE._serialized_start=25
+  _STRINGMESSAGE._serialized_end=53
+  _NDARRAYMESSAGE._serialized_start=55
+  _NDARRAYMESSAGE._serialized_end=88
+  _IMAGEMESSAGE._serialized_start=90
+  _IMAGEMESSAGE._serialized_end=155
+  _RESPONSE._serialized_start=157
+  _RESPONSE._serialized_end=180
+  _FLASKSERVICE._serialized_start=183
+  _FLASKSERVICE._serialized_end=410
 # @@protoc_insertion_point(module_scope)
