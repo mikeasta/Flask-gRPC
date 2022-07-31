@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "ndarray.proto";
+
 package flask_grpc;
 
 service FlaskService {
@@ -15,7 +17,7 @@ message StringMessage {
 
 // NP Array
 message NDArrayMessage {
-    bytes ndarray = 1;
+    numproto.protobuf.NDArray ndarray = 1;
 }
 
 // Image 

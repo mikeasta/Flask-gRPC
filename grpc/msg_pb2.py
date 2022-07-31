@@ -12,9 +12,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import ndarray_pb2 as ndarray__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\tmsg.proto\x12\nflask_grpc\"\x1c\n\rStringMessage\x12\x0b\n\x03msg\x18\x01 \x01(\t\"!\n\x0eNDArrayMessage\x12\x0f\n\x07ndarray\x18\x01 \x01(\x0c\"A\n\x0cImageMessage\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x12\n\nimage_data\x18\x03 \x01(\x0c\"\x17\n\x08Response\x12\x0b\n\x03res\x18\x01 \x01(\t2\xe3\x01\n\x0c\x46laskService\x12\x45\n\rStringRequest\x12\x19.flask_grpc.StringMessage\x1a\x19.flask_grpc.StringMessage\x12H\n\x0eNDArrayRequest\x12\x1a.flask_grpc.NDArrayMessage\x1a\x1a.flask_grpc.NDArrayMessage\x12\x42\n\x0cImageRequest\x12\x18.flask_grpc.ImageMessage\x1a\x18.flask_grpc.ImageMessageb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\tmsg.proto\x12\nflask_grpc\x1a\rndarray.proto\"\x1c\n\rStringMessage\x12\x0b\n\x03msg\x18\x01 \x01(\t\"=\n\x0eNDArrayMessage\x12+\n\x07ndarray\x18\x01 \x01(\x0b\x32\x1a.numproto.protobuf.NDArray\"A\n\x0cImageMessage\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x12\n\nimage_data\x18\x03 \x01(\x0c\"\x17\n\x08Response\x12\x0b\n\x03res\x18\x01 \x01(\t2\xe3\x01\n\x0c\x46laskService\x12\x45\n\rStringRequest\x12\x19.flask_grpc.StringMessage\x1a\x19.flask_grpc.StringMessage\x12H\n\x0eNDArrayRequest\x12\x1a.flask_grpc.NDArrayMessage\x1a\x1a.flask_grpc.NDArrayMessage\x12\x42\n\x0cImageRequest\x12\x18.flask_grpc.ImageMessage\x1a\x18.flask_grpc.ImageMessageb\x06proto3')
 
 
 
@@ -54,14 +55,14 @@ _FLASKSERVICE = DESCRIPTOR.services_by_name['FlaskService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _STRINGMESSAGE._serialized_start=25
-  _STRINGMESSAGE._serialized_end=53
-  _NDARRAYMESSAGE._serialized_start=55
-  _NDARRAYMESSAGE._serialized_end=88
-  _IMAGEMESSAGE._serialized_start=90
-  _IMAGEMESSAGE._serialized_end=155
-  _RESPONSE._serialized_start=157
-  _RESPONSE._serialized_end=180
-  _FLASKSERVICE._serialized_start=183
-  _FLASKSERVICE._serialized_end=410
+  _STRINGMESSAGE._serialized_start=40
+  _STRINGMESSAGE._serialized_end=68
+  _NDARRAYMESSAGE._serialized_start=70
+  _NDARRAYMESSAGE._serialized_end=131
+  _IMAGEMESSAGE._serialized_start=133
+  _IMAGEMESSAGE._serialized_end=198
+  _RESPONSE._serialized_start=200
+  _RESPONSE._serialized_end=223
+  _FLASKSERVICE._serialized_start=226
+  _FLASKSERVICE._serialized_end=453
 # @@protoc_insertion_point(module_scope)
