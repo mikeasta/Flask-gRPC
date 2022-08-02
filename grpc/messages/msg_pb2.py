@@ -11,6 +11,9 @@ from google.protobuf import symbol_database as _symbol_database
 
 _sym_db = _symbol_database.Default()
 
+
+# IMPORTANT!
+# Dont forget to add "from ." to the import to avoid errors 
 from . import ndarray_pb2 as ndarray__pb2
 
 

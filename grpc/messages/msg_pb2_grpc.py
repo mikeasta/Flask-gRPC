@@ -2,6 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
+# IMPORTANT!
+# Dont forget to add "from ." to the import to avoid errors 
 from . import msg_pb2 as msg__pb2
 
 
