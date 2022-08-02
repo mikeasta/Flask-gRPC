@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import msg_pb2 as msg__pb2
+from . import msg_pb2 as msg__pb2
 
 
 class FlaskServiceStub(object):

@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 
 _sym_db = _symbol_database.Default()
 
-import ndarray_pb2 as ndarray__pb2
+from . import ndarray_pb2 as ndarray__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\tmsg.proto\x12\nflask_grpc\x1a\rndarray.proto\"\x1c\n\rStringMessage\x12\x0b\n\x03msg\x18\x01 \x01(\t\"=\n\x0eNDArrayMessage\x12+\n\x07ndarray\x18\x01 \x01(\x0b\x32\x1a.numproto.protobuf.NDArray\"A\n\x0cImageMessage\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x12\n\nimage_data\x18\x03 \x01(\x0c\"\x17\n\x08Response\x12\x0b\n\x03res\x18\x01 \x01(\t2\xe3\x01\n\x0c\x46laskService\x12\x45\n\rStringRequest\x12\x19.flask_grpc.StringMessage\x1a\x19.flask_grpc.StringMessage\x12H\n\x0eNDArrayRequest\x12\x1a.flask_grpc.NDArrayMessage\x1a\x1a.flask_grpc.NDArrayMessage\x12\x42\n\x0cImageRequest\x12\x18.flask_grpc.ImageMessage\x1a\x18.flask_grpc.ImageMessageb\x06proto3')
