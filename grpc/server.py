@@ -2,8 +2,8 @@ import logging
 import grpc
 from settings import BACKEND_PORT
 from concurrent import futures
-from pb_handler import API_Server
-from msg_pb2_grpc import add_FlaskServiceServicer_to_server
+from utils.pb_handler import API_Server
+from messages.msg_pb2_grpc import add_FlaskServiceServicer_to_server
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

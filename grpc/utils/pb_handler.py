@@ -1,12 +1,16 @@
 import os
 import io
 import grpc 
+import sys
 import numpy as np
 from dotenv import load_dotenv
 from PIL import Image
 from numproto import ndarray_to_proto, proto_to_ndarray
-from msg_pb2 import StringMessage, NDArrayMessage, ImageMessage, Response
-from msg_pb2_grpc import FlaskServiceServicer, FlaskServiceStub
+from messages.msg_pb2 import StringMessage, NDArrayMessage, ImageMessage, Response
+from messages.msg_pb2_grpc import FlaskServiceServicer, FlaskServiceStub
+
+# Enable messages import
+sys.path.append('../')
 
 # Request server handler
 class API_Server(FlaskServiceServicer):
