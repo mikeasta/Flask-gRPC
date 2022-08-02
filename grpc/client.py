@@ -1,12 +1,11 @@
-import os
 from flask import Flask
 from dotenv import load_dotenv
 from PIL import Image
-from . import settings
 from utils.pb_handler import API_Client
 from utils.bytes2image import bytes2image
-
+import settings
 load_dotenv()
+
 app = Flask("client")
 
 app.config["api"] = API_Client(f"{settings.BACKEND_HOST}:{settings.BACKEND_PORT}")
