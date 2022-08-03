@@ -13,7 +13,6 @@ def serve():
     server.wait_for_termination()
 
 if __name__ == '__main__':
-    print(f'Server on port {BACKEND_PORT} is running!')
+    print(f'Server is running on port {BACKEND_PORT}.')
     logging.basicConfig()
     serve()
-    print('Server terminated!')

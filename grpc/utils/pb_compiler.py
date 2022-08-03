@@ -18,8 +18,8 @@ def pb_compiler(\
     # are written in the next format
     # name_one_without_'.proto',name_two_without_'.proto',...
     filenames = filenames.split(',')
-    
-    print(filenames)
+
+    # Compiling every chosen .proto file
     for filename in filenames:
         command = f'python -m grpc_tools.protoc -I={src} --python_out={dst} --grpc_python_out={dst} {src}/{filename}.proto'
         os.system(command)

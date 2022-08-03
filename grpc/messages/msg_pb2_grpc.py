@@ -2,13 +2,15 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-# IMPORTANT!
-# Dont forget to add "from ." to the import to avoid errors 
+# IMPORTANT:
+# Dont forget to add 'from .' to avoid errors
 from . import msg_pb2 as msg__pb2
 
 
 class FlaskServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Unary gRPC connections
+    to be able to transfer different data types
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -34,7 +36,9 @@ class FlaskServiceStub(object):
 
 
 class FlaskServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Unary gRPC connections
+    to be able to transfer different data types
+    """
 
     def StringRequest(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -80,7 +84,9 @@ def add_FlaskServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class FlaskService(object):
-    """Missing associated documentation comment in .proto file."""
+    """Unary gRPC connections
+    to be able to transfer different data types
+    """
 
     @staticmethod
     def StringRequest(request,

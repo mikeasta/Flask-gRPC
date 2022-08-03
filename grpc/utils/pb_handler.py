@@ -51,4 +51,3 @@ class API_Client:
         protobuf = ImageMessage(width=width, height=height, image_data=image_data)
         response = self.client.ImageRequest(protobuf)
         return [response.width, response.height, response.image_data]
-
